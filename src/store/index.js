@@ -21,6 +21,27 @@ export default createStore({
     }
   },
   actions: {
+    // 可以将context看成是new出来的store示例对象
+    addAsync (context) {
+      setTimeout(() => {
+        context.commit('add')
+      }, 1000)
+    },
+    addNAsync (context, step) {
+      setTimeout(() => {
+        context.commit('addN', step)
+      })
+    },
+    subAsync (context) {
+      setTimeout(() => {
+        context.commit('sub')
+      }, 1000)
+    },
+    subNAsync (context, step) {
+      setTimeout(() => {
+        context.commit('subN', step)
+      }, 1000)
+    }
   },
   modules: {
   }
