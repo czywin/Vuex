@@ -5,6 +5,9 @@ export default createStore({
     count: 0
   },
   getters: {
+    showcount (state) {
+      return '当前计数器的值为' + state.count
+    }
   },
   mutations: {
     add (state) {

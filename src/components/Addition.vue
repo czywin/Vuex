@@ -1,7 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <div>
-        <h3>当前计数器的值为：{{ $store.state.count }}</h3>
+        <!-- <h3>当前计数器的值为：{{ $store.state.count }}</h3> -->
+        <h3>{{ $store.getters.showcount }}</h3>
         <button @click="btnHandler1">+1</button>
         <button @click="btnHandlern">+N</button>
         <button @click="btnHandler2">+1 async</button>
